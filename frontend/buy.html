@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+   <link rel="stylesheet" href="../node_modules/font-awesome/css/font-awesome.min.css">
+   <link rel="stylesheet" href="../node_modules/print-js/dist/print.css">
+   <link rel="stylesheet" href="./src/css/style.css">
+   <title>Tickets</title>
+</head>
+
+<body>
+
+   <!-- N A V B A R -->
+   <nav class="navbar navbar-expand-lg navbar-dark main-bg-color">
+      <div class="container fs-4">
+         <a class="navbar-brand fs-3" href="#">Tickets</a>
+         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+         </button>
+         <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+               <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link" href="./dashboard.html">Dashboard</a>
+               </li>
+
+
+            </ul>
+
+         </div>
+      </div>
+   </nav>
+   <!-- N A V B A R -->
+
+
+   <div class="container">
+      <div class="row">
+         <div  class="card my-5">
+            <div  class="card-header d-flex justify-content-between">
+               <h5 class="h3">Buy Ticket <span id="title">title</span> <i class="fa fa-ticket" aria-hidden="true"></i>
+               </h5>
+               <p class="h5">Max Ticket : <span id="maxTicket">10000</span></p>
+            </div>
+            <div id="ticketPDF" class="card-body">
+               <div class="ticket  text-light p-4 shadow-lg">
+                  <p id="header" class="text-center fw-bold fs-2  border-bottom pb-2">Lorem ipsum dolor sit amet.</p>
+                  <div class="row text-center">
+                     <div class="col">
+                        <i class="fa fa-calendar fs-1 d-block p-2" aria-hidden="true"></i>
+                        <span>Date</span>
+                        <p id="date">12-12-2020</p>
+                     </div>
+                     <div class="col">
+                        <i class="fa fa-clock-o fs-1 d-block p-2" aria-hidden="true"></i>
+                        <span>Open Gets</span>
+                        <p id="openGets">20:20</p>
+                     </div>
+                     <div class="col">
+                        <i class="fa fa-life-ring fs-1 d-block p-2" aria-hidden="true"></i>
+                        <span>Stadium</span>
+                        <p id="stadium">wambli</p>
+                     </div>
+                     <div class="col">
+                        <i class="fa fa-map fs-1 d-block p-2" aria-hidden="true"></i>
+                        <span>Round</span>
+                        <p id="round">Final</p>
+                     </div>
+
+                  </div>
+                  <div class="row text-center mt-4 p-4 fs-1">
+                     <div class="col">
+                        <p id="team1">Team#1</p>
+                     </div>
+                     <div class="col">
+                        <p class="d-5">VS</p>
+                     </div>
+                     <div class="col">
+                        <p id="team2">Team#2</p>
+                     </div>
+                  </div>
+                  <div class="row text-center mt-4">
+                     <div class="col">
+                        <p class="fs-1"> N : <span id="currentTickets">100</span> </p>
+                     </div>
+                     <div class="col">
+                        <p class="fs-1"> Price : <span id="price">100</span> </p>
+                     </div>
+                  </div>
+                  <p id="idClient" class="text-center fs-4">54897644646</p>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="row pb-4">
+         <h3 class="pb-4">Buy Ticket Now</h3>
+         <form method="post" id="buyTicket">
+            <div class="mb-3">
+               <label for="FirstName" class="form-label">First Name</label>
+               <input type="text" class="form-control" id="firstName">
+            </div>
+            <div class="mb-3">
+               <label for="LastName" class="form-label">Last Name</label>
+               <input type="text" class="form-control" id="lastName">
+            </div>
+
+            <div class="d-grid">
+               <button id="btnBuy" type="submit" class="btn btn-primary btn-lg">Buy Ticket</button>
+            </div>
+           
+         </form>
+      </div>
+   </div>
+
+
+   <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+   <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+  
+
+
+   
+   <script src="./src/js/buyPage.js"></script>
+   
+   <script  src="../node_modules/html2pdf.js/dist/html2pdf.min.js"></script>
+   <script  src="../node_modules/html2pdf.js/dist/html2pdf.bundle.min.js"></script>
+
+
+</body>
+
+</html>

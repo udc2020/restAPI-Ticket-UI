@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+   <link rel="stylesheet" href="./src/css/style.css">
+   <title>Tickets</title>
+</head>
+<body>
+
+   <!-- N A V B A R -->
+   <nav class="navbar navbar-expand-lg navbar-dark main-bg-color">
+      <div class="container fs-4">
+        <a class="navbar-brand fs-3" href="#">Tickets</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link " aria-current="page" href="./index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="./dashboard.html">Dashboard</a>
+            </li>
+           
+
+          </ul>
+          
+        </div>
+      </div>
+    </nav>
+   <!-- N A V B A R -->
+   
+   <!-- I N F O  -->
+    <section class="info">
+      <div class="container py-4 mt-4">
+         <h3 class="display-6 text-capitalize">Some Information</h3>
+         <div class="row mt-5">
+            <div class="col">
+               <div class="card-info shadow-lg ">
+                  <p class="fs-3 mb-0">Tickets</p>
+                  <p id="ticketsNumber" class="fs-3 mt-0">100</p>
+               </div>
+            </div>
+            <div class="col ">
+               <div class="card-info shadow-lg d-none ">
+                  <p class="fs-3 mb-0">Tickets</p>
+                  <p id="ticketsNumber" class="fs-3 mt-0">100</p>
+               </div>
+            </div>
+            
+         </div>
+         <div class="row mt-5 ">
+            <h3 class="display-6 text-capitalize">generate ticket</h3>
+            <form id="generateTicket" method="post" enctype="multipart/form-data">
+
+               <div class="input-group my-3">
+                  <label for="exampleInputPassword1" class="form-label me-3">Header</label>
+                  <input type="text" class="form-control"  placeholder="Header .... " name="header">
+                  <label for="exampleInputPassword1" class="form-label mx-3">Date</label>
+                  <input type="date" class="form-control ms-3"  placeholder="Date...." name="date" >              
+               </div>
+               <div class="input-group my-3">
+                  <label for="exampleInputPassword1" class="form-label me-3">stadium</label>
+                  <input type="text" class="form-control"  placeholder="stadium .... " name="stadium">
+                  <label for="exampleInputPassword1" class="form-label mx-3">Open Gets</label>
+                  <input type="time" class="form-control ms-3"  placeholder="DateOpen Gets...." name="getsOpen">              
+               </div>
+               <div class="input-group my-3">
+                  <label for="exampleInputPassword1" class="form-label me-3">Team 1</label>
+                  <input type="text" class="form-control"  placeholder="Team 1 .... " name="team1">
+             
+                  <label for="exampleInputPassword1" class="form-label me-3">Team 2</label>
+                  <input type="text" class="form-control"  placeholder="Team 2 .... " name="team2">
+             
+               </div>
+               <div class="input-group my-3">
+                  <label for="exampleInputPassword1" class="form-label me-3">price</label>
+                  <input type="text" class="form-control"  placeholder="price .... " name="price">
+             
+                  <label for="exampleInputPassword1" class="form-label me-3">color</label>
+                  <input type="color" class="form-control"  placeholder="Team 2 .... " name="color" >
+             
+               </div>
+               <div class="input-group my-3">
+                  <label for="exampleInputPassword1" class="form-label me-3">round</label>
+                  <input type="text" class="form-control"  placeholder="round .... " name="round">
+             
+                  <label for="exampleInputPassword1" class="form-label me-3">max tickets</label>
+                  <input type="text" class="form-control"  placeholder="max tikets .... " name="maxTickets">
+             
+               </div>
+
+
+                <div class="d-grid">
+                   <button id="btnEdit" type="submit" class="btn btn-primary ">Submit</button>
+                </div>
+
+            </form>
+      </div>
+    </section>
+   <!-- I N F O  -->
+
+   <!-- T I C K E T S M A N A G E R -->
+   <section class="manager py-5">
+      <div class="container">
+         <h3 class="display-6 text-capitalize">Manage Tickets</h3>
+
+         <table class="table mt-5">
+            <thead>
+              <tr class="fw-bold text-uppercase">
+                <th scope="col">ID</th>
+                <th scope="col">Team#1</th>
+                <th scope="col">Team#2</th>
+                <th scope="col">stadium</th>
+                <th scope="col">max ticket</th>
+                <th scope="col">current ticket</th>
+                <th scope="col">price</th>
+                <th scope="col">edit</th>
+              </tr>
+            </thead>
+            <tbody id="tableTickets">
+             </tbody>
+          </table>
+      </div>
+   </section>
+   <!-- T I C K E T S M A N A G E R -->
+
+
+
+   <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+   <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+   <script src="./src/js/dashboard.js"></script>
+</body>
+</html>

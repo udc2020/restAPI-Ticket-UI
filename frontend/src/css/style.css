@@ -1,0 +1,46 @@
+:root{
+   --main--color:#280fe3!important;
+   --second--color:#383838!important;
+}
+
+
+.main-bg-color{
+   background-color: var(--main--color);
+}
+
+.card-info{
+   background-color: var(--main--color);
+   border-radius: 10px;
+   width: calc(100% - 10em);
+   height: auto;
+   padding: .5em 6em;
+   text-align: center;
+   color: white;
+   
+}
+
+
+textarea {
+   min-width: 100%;
+   background-color: transparent;
+   border: none;
+   color: white;
+   resize: none;
+   display: inline;
+}
+textarea:focus{
+   border: none;
+   outline: none;
+}
+
+.btn-primary{
+   background-color: var(--main--color);
+   border: var(--main--color);
+}
+.btn-primary:hover{
+   opacity: .98;
+   background-color: var(--main--color);
+}
+
+
+
